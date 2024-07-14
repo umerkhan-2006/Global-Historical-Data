@@ -28,7 +28,7 @@ def save_to_csv(df, stock_symbol):
     print(f'Data saved to {file_name}')
 
 if __name__ == "__main__":
-    stock_symbols = ['^STI', 'D05.SI', 'C6L.SI', 'U11.SI', 'O39.SI', 'C09.SI', 'Z74.SI', 'C31.SI', 'C09.SI', 'C38U.SI']  # Add more symbols as needed (STI)
+    stock_symbols = ['^MXX', 'AMXL.MX', 'FEMSAUBD.MX', 'GMEXICOB.MX', 'GFINBURO.MX', 'WALMEX.MX', 'KIMBERA.MX', 'CEMEXCPO.MX', 'ALSEA.MX', 'GAPB.MX']  # Add more symbols as needed (MEXICO)
     for symbol in stock_symbols:
         try:
             df = get_stock_data(symbol)
