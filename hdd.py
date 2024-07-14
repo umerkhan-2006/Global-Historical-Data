@@ -28,7 +28,7 @@ def save_to_csv(df, stock_symbol):
     print(f'Data saved to {file_name}')
 
 if __name__ == "__main__":
-    stock_symbols = ['MICEXINDEXCF.ME', 'SBER.ME', 'LKOH.ME', 'GAZP.ME', 'YNDX.ME', 'NVTK.ME', 'ROSN.ME', 'GMKN.ME', 'VTBR.ME', 'ALRS.ME']  # Add more symbols as needed (Russia)
+    stock_symbols = ['^JTOPI', 'BHPJ.J', 'SOLJ.J', 'ABGJ.J', 'NPNJ.J', 'MTNJ.J', 'GLNJ.J', 'FSRJ.J', 'IMPJ.J', 'AGLJ.J']  # Add more symbols as needed (South Africa)
     for symbol in stock_symbols:
         try:
             df = get_stock_data(symbol)
