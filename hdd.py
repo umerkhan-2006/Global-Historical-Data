@@ -28,7 +28,7 @@ def save_to_csv(df, stock_symbol):
     print(f'Data saved to {file_name}')
 
 if __name__ == "__main__":
-    stock_symbols = ['600000.SS', '600004.SS', '600006.SS', '600007.SS', '600008.SS', '600009.SS', '600010.SS', '600011.SS', '600012.SS', '600015.SS', '600016.SS', '600017.SS', '600018.SS', '600019.SS', '600020.SS', '600021.SS', '600022.SS', '600023.SS', '600025.SS', '600026.SS']  # Add more symbols as needed
+    stock_symbols = ['ABI.AS', 'AD.AS', 'AGN.AS', 'AKZA.AS', 'ASML.AS', 'DSM.AS', 'GLPG.AS', 'HEIA.AS', 'IMCD.AS', 'INGA.AS', 'KPN.AS', 'MT.AS', 'NN.AS', 'PHIA.AS', 'RAND.AS', 'REN.AS', 'RDSA.AS', 'RDSB.AS', 'SBMO.AS', 'UNA.AS']  # Add more symbols as needed (Euronext)
     for symbol in stock_symbols:
         try:
             df = get_stock_data(symbol)
