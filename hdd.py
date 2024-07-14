@@ -28,7 +28,7 @@ def save_to_csv(df, stock_symbol):
     print(f'Data saved to {file_name}')
 
 if __name__ == "__main__":
-    stock_symbols = ['^NZ50', 'AIA.NZ', 'ATM.NZ', 'ANZ.NZ', 'ARG.NZ', 'CEN.NZ', 'FPH.NZ', 'FBU.NZ', 'GNE.NZ', 'IFT.NZ']  # Add more symbols as needed (NZ)
+    stock_symbols = ['^OBX', 'EQNR.OL', 'DNB.OL', 'NHY.OL', 'TEL.OL', 'ORK.OL', 'YAR.OL', 'SUBC.OL', 'AKRBP.OL', 'MOWI.OL']  # Add more symbols as needed (Norway)
     for symbol in stock_symbols:
         try:
             df = get_stock_data(symbol)
