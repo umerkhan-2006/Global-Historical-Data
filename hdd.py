@@ -28,7 +28,7 @@ def save_to_csv(df, stock_symbol):
     print(f'Data saved to {file_name}')
 
 if __name__ == "__main__":
-    stock_symbols = ['0001.HK', '0002.HK', '0003.HK', '0004.HK', '0005.HK', '0006.HK', '0008.HK', '0011.HK', '0012.HK', '0016.HK', '0017.HK', '0019.HK', '0023.HK', '0027.HK', '0066.HK', '0101.HK', '0388.HK', '0688.HK', '0700.HK', '0762.HK']  # Add more symbols as needed (HSI)
+    stock_symbols = ['3IN.L', 'AAL.L', 'ABF.L', 'ADM.L', 'AHT.L', 'ANTO.L', 'AUTO.L', 'AV.L', 'AZN.L', 'BA.L', 'BARC.L', 'BATS.L', 'BDEV.L', 'BKG.L', 'BLND.L', 'BME.L', 'BNZL.L', 'BP.L', 'BRBY.L', 'BT-A.L', 'CCH.L', 'CPG.L', 'CRH.L', 'CRDA.L', 'DCC.L', 'DGE.L', 'DLG.L', 'EXPN.L', 'FERG.L', 'FLTR.L', 'GLEN.L', 'GSK.L', 'HLMA.L', 'HSBA.L', 'IAG.L', 'ICP.L', 'IHG.L', 'III.L', 'IMB.L', 'INF.L', 'ITRK.L', 'JD.L', 'JET.L', 'KGF.L', 'LAND.L', 'LGEN.L', 'LLOY.L', 'LSE.L', 'MNDI.L', 'MNG.L', 'MRO.L', 'MRW.L', 'NG.L', 'NXT.L', 'OCDO.L', 'PHNX.L', 'POLY.L', 'PRU.L', 'PSN.L', 'PSON.L', 'RB.L', 'RDSA.L', 'RDSB.L', 'REL.L', 'RIO.L', 'RR.L', 'RTO.L', 'SBRY.L', 'SDR.L', 'SGE.L', 'SGRO.L', 'SHEL.L', 'SMDS.L', 'SMIN.L', 'SMT.L', 'SN.L', 'SPX.L', 'SSE.L', 'STAN.L', 'STJ.L', 'SVT.L', 'TSCO.L', 'TW.L', 'ULVR.L', 'UU.L', 'VOD.L', 'WEIR.L', 'WTB.L', 'WPP.L']  # Add more symbols as needed (FTSE 100)
     for symbol in stock_symbols:
         try:
             df = get_stock_data(symbol)
