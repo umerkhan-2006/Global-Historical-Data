@@ -28,7 +28,7 @@ def save_to_csv(df, stock_symbol):
     print(f'Data saved to {file_name}')
 
 if __name__ == "__main__":
-    stock_symbols = ['RELIANCE.BO', 'TCS.BO', 'HDFCBANK.BO', 'HINDUNILVR.BO', 'INFY.BO', 'ICICIBANK.BO', 'KOTAKBANK.BO', 'SBIN.BO', 'AXISBANK.BO', 'BAJFINANCE.BO', 'HCLTECH.BO', 'ITC.BO', 'LT.BO', 'BHARTIARTL.BO', 'ASIANPAINT.BO', 'MARUTI.BO', 'TATASTEEL.BO', 'M&M.BO', 'SUNPHARMA.BO', 'NTPC.BO', 'POWERGRID.BO', 'ULTRACEMCO.BO', 'HDFCLIFE.BO', 'NESTLEIND.BO', 'TECHM.BO']  # Add more symbols as needed (BSE India)
+    stock_symbols = ['ADS.DE', 'ALV.DE', 'BAS.DE', 'BAYN.DE', 'BMW.DE', 'CON.DE', '1COV.DE', 'DAI.DE', 'DB1.DE', 'DBK.DE', 'DPW.DE', 'DTE.DE', 'DWNI.DE', 'EOAN.DE', 'FRE.DE', 'FME.DE', 'HEI.DE', 'HEN3.DE', 'IFX.DE', 'LIN.DE', 'MRK.DE', 'MUV2.DE', 'PUM.DE', 'RWE.DE', 'SAP.DE', 'SIE.DE', 'VOW3.DE', 'VNA.DE', 'MTX.DE', 'ZAL.DE']  # Add more symbols as needed (DAX Germany)
     for symbol in stock_symbols:
         try:
             df = get_stock_data(symbol)
