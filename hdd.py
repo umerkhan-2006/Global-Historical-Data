@@ -28,7 +28,7 @@ def save_to_csv(df, stock_symbol):
     print(f'Data saved to {file_name}')
 
 if __name__ == "__main__":
-    stock_symbols = ['ADEN.SW', 'CSGN.SW', 'NESN.SW', 'NOVN.SW', 'ROG.SW', 'SCMN.SW', 'SGSN.SW', 'SIKA.SW', 'SLHN.SW', 'STMN.SW']  # Add more symbols as needed (SMI)
+    stock_symbols = ['005930.KS', '000660.KS', '005935.KS', '035420.KS', '051910.KS', '207940.KS', '005380.KS', '068270.KS', '012330.KS', '051900.KS']  # Add more symbols as needed (KOSPI)
     for symbol in stock_symbols:
         try:
             df = get_stock_data(symbol)
