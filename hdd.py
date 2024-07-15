@@ -28,7 +28,7 @@ def save_to_csv(df, stock_symbol):
     print(f'Data saved to {file_name}')
 
 if __name__ == "__main__":
-    stock_symbols = ['^DSEX', 'BRACBANK.DH', 'SQURPHARMA.DH', 'GP.DH', 'BATBC.DH', 'LHBL.DH', 'BXPHARMA.DH', 'IDLC.DH', 'ACI.DH', 'MJLBD.DH']  # Add more symbols as needed (Bangladesh)
+    stock_symbols = ['^KSE100', 'OGDC.KA', 'HBL.KA', 'MCB.KA', 'UBL.KA', 'ENGRO.KA', 'PPL.KA', 'LUCK.KA', 'FFC.KA', 'POL.KA', 'PSO.KA', 'HUBC.KA', 'BAHL.KA', 'MARI.KA', 'DGKC.KA', 'NBP.KA', 'INDU.KA', 'FFBL.KA', 'SNGP.KA', 'KAPCO.KA', 'NRL.KA', 'MTL.KA', 'ATRL.KA', 'SSGC.KA', 'EFERT.KA', 'AKBL.KA', 'SYS.KA', 'FCCL.KA', 'EPCL.KA', 'LOTCHEM.KA', 'GWLC.KA', 'INIL.KA', 'PKGS.KA', 'KOHC.KA', 'PAEL.KA', 'EFUL.KA', 'DOL.KA', 'PMPK.KA', 'MUGHAL.KA', 'NETSOL.KA', 'TPL.KA', 'KTML.KA', 'SSGC.KA', 'PIOC.KA', 'TRG.KA', 'LPL.KA', 'GATM.KA']  # Add more symbols as needed (Pakistan)
     for symbol in stock_symbols:
         try:
             df = get_stock_data(symbol)
