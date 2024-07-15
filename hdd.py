@@ -28,7 +28,7 @@ def save_to_csv(df, stock_symbol):
     print(f'Data saved to {file_name}')
 
 if __name__ == "__main__":
-    stock_symbols = ['^WIG20', 'PKN.WA', 'PKO.WA', 'PEO.WA', 'PZU.WA', 'KGH.WA', 'LPP.WA', 'DNP.WA', 'CCC.WA', 'CDR.WA']  # Add more symbols as needed (Poland)
+    stock_symbols = ['^ISEQ', 'CRG.IR', 'DCC.IR', 'GL9.IR', 'KRZ.IR', 'RYA.IR', 'PZC.IR', 'GNC.IR', 'DRX.IR', 'KYG.IR']  # Add more symbols as needed (Ireland)
     for symbol in stock_symbols:
         try:
             df = get_stock_data(symbol)
