@@ -21,7 +21,7 @@ def get_stock_data(stock_symbol):
     if response.status_code == 200:
         soup = BeautifulSoup(response.text, 'html.parser')
         # Look for the correct table by class name
-        table = soup.find('table', {'class': 'W(100%) M(0)'})  # This class name may vary; inspect the page for accuracy
+        table = soup.find('table', {'class': 'W(100%) M(0)'})  # Check the page for the exact class name
 
         if table is not None:
             rows = table.find_all('tr')
@@ -38,23 +38,25 @@ def get_stock_data(stock_symbol):
             return df
         else:
             print(f"Error scraping {stock_symbol}: No historical data table found. Check if the symbol is correct or if data is available.")
-            return None
+            return pd.DataFrame()  # Return an empty DataFrame instead of None
     else:
         print(f"Error scraping {stock_symbol}: Failed to retrieve data. Status code: {response.status_code}")
-        return None
-
+        return pd.DataFrame()  # Return an empty DataFrame instead of None
 
 def save_to_csv(df, stock_symbol):
-    file_name = f'{stock_symbol}_historical_data.csv'
-    df.to_csv(file_name, index=False)
-    print(f'Data saved to {file_name}')
+    if not df.empty:  # Check if DataFrame is not empty
+        file_name = f'{stock_symbol}_historical_data.csv'
+        df.to_csv(file_name, index=False)
+        print(f'Data saved to {file_name}')
+    else:
+        print(f"No data to save for {stock_symbol}.")
 
 if __name__ == "__main__":
-    stock_symbols = ['A', 'AAL', 'AAP', 'AAPL']  # Add more symbols as needed (ALL)
+    stock_symbols = ['A', 'AAL', 'AAP', 'AAPL']  # Add more symbols as needed
     for symbol in stock_symbols:
         try:
             df = get_stock_data(symbol)
             save_to_csv(df, symbol)
             print(f"Successfully scraped data for {symbol}")
-        except ValueError as e:
+        except Exception as e:
             print(f"Error scraping {symbol}: {e}")
