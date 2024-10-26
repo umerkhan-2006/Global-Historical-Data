@@ -19,9 +19,9 @@ def get_stock_data(stock_symbol):
     response = requests.get(url, headers=headers)
 
     if response.status_code == 200:
-        # Use BeautifulSoup to parse the page and extract the data table
         soup = BeautifulSoup(response.text, 'html.parser')
-        table = soup.find('table', {'data-test': 'historical-prices'})  # Look for the correct table
+        # Look for the correct table by class name
+        table = soup.find('table', {'class': 'W(100%) M(0)'})  # This class name may vary; inspect the page for accuracy
 
         if table is not None:
             rows = table.find_all('tr')
@@ -37,9 +37,11 @@ def get_stock_data(stock_symbol):
             df['Date'] = pd.to_datetime(df['Date'])
             return df
         else:
-            raise ValueError("No historical data table found.")
+            print(f"Error scraping {stock_symbol}: No historical data table found. Check if the symbol is correct or if data is available.")
+            return None
     else:
-        raise ValueError(f"Failed to retrieve data. Status code: {response.status_code}")
+        print(f"Error scraping {stock_symbol}: Failed to retrieve data. Status code: {response.status_code}")
+        return None
 
 
 def save_to_csv(df, stock_symbol):
