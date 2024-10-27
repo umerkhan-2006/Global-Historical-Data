@@ -1,3 +1,6 @@
+import os  # This imports the operating system module to check directories
+print("Current directory:", os.getcwd())  # This will print the current directory path
+
 import io
 import requests
 from bs4 import BeautifulSoup
