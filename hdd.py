@@ -1,5 +1,10 @@
+import io
+import requests
+from bs4 import BeautifulSoup
 import pandas as pd
-import os
+import datetime
+import json
+import re
 
 def load_data(symbol):
     file_path = f'{str(symbol)}_historical_data.csv'
